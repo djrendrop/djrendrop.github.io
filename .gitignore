@@ -1,3 +1,8 @@
 .DS_Store
 assets/.DS_Store
 assets/img/.DS_Store
+
+# Ferramentas / agentes (não pertencem ao site público)
+.claude/
+.serena/
+Thumbs.db
