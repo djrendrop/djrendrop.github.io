@@ -243,17 +243,19 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
 .release__text strong { color: var(--text-main); font-weight: 500; }
 
 .release__venues {
-  display: flex; flex-wrap: wrap; gap: 12px;
+  display: flex; flex-wrap: wrap; gap: 16px;
+  margin-top: 8px;
 }
 .release__venues__label {
-  width: 100%; font-family: var(--font-display); font-size: 0.7rem;
-  text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-burnt); margin-bottom: 8px;
+  width: 100%; font-family: var(--font-display); font-size: 1rem;
+  font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--c-burnt); margin-bottom: 12px;
 }
 .release__venues span:not(.release__venues__label) {
-  font-family: var(--font-display); font-size: 0.75rem; text-transform: uppercase;
-  letter-spacing: 0.05em; padding: 8px 16px;
+  font-family: var(--font-display); font-size: 0.9rem; text-transform: uppercase;
+  letter-spacing: 0.08em; padding: 14px 24px;
   background: var(--bg-surface); border: 1px solid var(--border-tech);
-  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
   color: var(--text-muted);
   cursor: default;
   transition: background 0.35s cubic-bezier(0.25, 1, 0.5, 1),
@@ -269,7 +271,7 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
   color: var(--text-main);
   transform: translateY(-4px);
   filter: drop-shadow(0 6px 18px rgba(113, 82, 255, 0.45));
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 }
 
 .release__photo {
@@ -353,25 +355,37 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
   display: flex; flex-direction: column; align-items: center;
   background: radial-gradient(circle at 50% 100%, var(--c-mixed-dim) 0%, transparent 60%);
 }
-.contact-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 500px; margin: 0 auto 48px auto; }
 .contact-wa {
-  display: inline-flex; align-items: center; justify-content: center;
-  padding: 20px 48px; font-family: var(--font-display); font-size: 1rem; font-weight: 600;
-  text-transform: uppercase; letter-spacing: 0.2em; color: var(--bg-dark);
-  background: var(--c-burnt); text-decoration: none;
-  clip-path: polygon(24px 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 24px);
-  transition: 0.3s; position: relative;
+  display: inline-block; margin-top: 24px;
+  font-family: var(--font-display); font-size: 2.6rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.22em; color: var(--text-main);
+  text-decoration: none; transition: color 0.3s ease; position: relative;
+  line-height: 1;
 }
-.contact-wa:hover {
-  background: var(--text-main);
+.contact-wa::after {
+  content: ''; position: absolute; left: 0; bottom: -8px;
+  width: 0; height: 2px; background: var(--c-burnt); transition: width 0.35s ease;
 }
-.contact-agency { margin-top: 80px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.contact-agency__label { font-family: var(--font-display); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-muted); }
-.contact-agency__logo { height: 40px; opacity: 0.5; filter: grayscale(100%); transition: 0.3s; }
-.contact-agency__logo:hover { opacity: 1; filter: grayscale(0%); }
+.contact-wa:hover { color: var(--c-burnt); }
+.contact-wa:hover::after { width: 100%; }
+
+.contact-agency {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  margin-top: 65px;
+}
+.contact-agency__label {
+  font-family: var(--font-display); font-size: 0.7rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.32em; color: var(--text-muted);
+}
+.contact-agency__logo {
+  height: 175px; opacity: 0.85; filter: none; mix-blend-mode: screen;
+  transition: opacity 0.3s;
+}
+.contact-agency__logo:hover { opacity: 1; }
 
 /* ─── FOOTER ─── */
 .footer {
+  position: relative;
   padding: 40px 48px; display: flex; justify-content: space-between; align-items: center;
   border-top: 1px solid var(--border-tech); background: var(--bg-panel);
   font-family: var(--font-display); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);
