@@ -431,16 +431,13 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
 /* ─── RESPONSIVO ─── */
 @media(max-width: 980px) {
   .release, .links-wrap { grid-template-columns: 1fr; padding: 80px 24px; gap: 48px; }
-  .hero { flex-direction: column; }
-  .hero__media { flex: 0 0 55vh; width: 100%; }
+  /* Hero em coluna: texto na parte de baixo (fora do rosto), igual ao mobile */
+  .hero { flex-direction: column; justify-content: flex-end; padding: 48px 40px; }
   .hero__img { object-position: center top; }
-  .hero__content {
-    flex: 1; padding: 48px 24px; justify-content: center;
-  }
+  .hero__content { flex: 0 1 auto; padding: 0; margin-bottom: 12vh; max-width: 100%; }
   .nav { padding: 0 24px; }
   .hero__name h1 { font-size: 3.5rem; }
   .hero__label { display: none; }
-  .hero__edge { left: 24px; }
   .contact-section { padding: 100px 24px; }
   .footer { flex-direction: column; gap: 16px; text-align: center; }
 }
