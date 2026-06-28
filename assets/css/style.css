@@ -444,3 +444,54 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
   .contact-section { padding: 100px 24px; }
   .footer { flex-direction: column; gap: 16px; text-align: center; }
 }
+
+/* ─── MOBILE (≤600px) ─── */
+@media (max-width: 600px) {
+  /* NAV */
+  .nav { padding: 0 16px; }
+  .nav__brand img { height: 36px; }
+  .nav__links { gap: 14px; }
+  .nav__links a { font-size: 0.62rem; letter-spacing: 0.06em; }
+
+  /* HERO — texto na parte de baixo, fora do rosto */
+  .hero { padding: 24px; justify-content: flex-end; }
+  .hero__content { flex: 0 1 auto; padding: 0; margin-bottom: 16vh; max-width: 100%; }
+  /* Mantém só o scroll do hero; remove os que colidem com conteúdo */
+  .release .section-scroll, .links-wrap .section-scroll { display: none; }
+  .hero__name h1 { font-size: clamp(2.4rem, 13vw, 3rem); line-height: 0.9; }
+  .hero__name h1 .tw-2 { font-size: 1rem; margin-top: 12px; }
+  .hero__name__sub { font-size: 0.78rem; margin-top: 18px; }
+
+  /* RELEASE / LINKS — espaçamento e tipografia */
+  .release, .links-wrap { padding: 72px 20px; gap: 40px; }
+  .release__body { margin-top: 0; }
+  .release__heading, .links-heading, .contact-heading { font-size: 1.9rem; margin-bottom: 24px; }
+  .release__text { font-size: 1rem; margin-bottom: 32px; }
+  .release__eyebrow, .release__index, .contact-eyebrow { margin-bottom: 18px; }
+  .release__venues__label { font-size: 0.85rem; }
+  .release__venues span:not(.release__venues__label) { font-size: 0.78rem; padding: 10px 16px; }
+  .release__photo { padding: 16px; }
+
+  /* LINKS */
+  .links__photo__quote { left: 12px; bottom: 12px; max-width: 220px; padding: 14px 16px; font-size: 0.72rem; }
+  .links__sub { font-size: 0.9rem; margin-bottom: 28px; }
+  .link-row { padding: 16px 20px; }
+  .link-row__content { margin-left: 16px; }
+  .link-row__name { font-size: 1.1rem; }
+  .link-row__sub { font-size: 0.78rem; }
+  .link-row__arrow { font-size: 1.2rem; }
+  .link-row:hover { transform: none; box-shadow: none; }
+
+  /* CONTATO */
+  .contact-section { padding: 72px 20px 90px; }
+  .contact-wa { font-size: 1.9rem; letter-spacing: 0.12em; margin-top: 20px; }
+  .contact-agency { margin-top: 48px; }
+  .contact-agency__label { letter-spacing: 0.22em; }
+  .contact-agency__logo { height: auto; width: 68%; max-width: 220px; }
+
+  /* FOOTER */
+  .footer { padding: 28px 20px; font-size: 0.68rem; }
+
+  /* MODAL */
+  .modal__content { max-width: 92%; max-height: 82vh; }
+}
