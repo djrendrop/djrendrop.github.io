@@ -222,18 +222,18 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
 .release__body {
   display: flex; flex-direction: column; margin-top: -30px;
 }
-.release__index, .contact-eyebrow, .release__eyebrow {
+.release__index, .contact-eyebrow, .release__eyebrow, .set-eyebrow {
   font-family: var(--font-display); font-size: 0.75rem; letter-spacing: 0.2em;
   color: var(--c-mixed-solid); text-transform: uppercase;
   display: inline-block; padding: 4px 12px;
   border: 1px solid var(--border-tech);
   margin-bottom: 24px;
 }
-.release__heading, .links-heading, .contact-heading {
+.release__heading, .links-heading, .contact-heading, .set-heading {
   font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem);
   text-transform: uppercase; font-weight: 600; line-height: 1.1; margin-bottom: 32px;
 }
-.release__heading em, .links-heading em, .contact-heading em {
+.release__heading em, .links-heading em, .contact-heading em, .set-heading em {
   font-style: normal; font-weight: 300; color: var(--c-burnt);
 }
 .release__text {
@@ -331,6 +331,18 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
 .links__sub { font-size: 1rem; color: var(--text-muted); margin-bottom: 40px; }
 
 .links-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+
+/* ─── SET EM DESTAQUE ─── */
+.set-section {
+  position: relative; padding: 100px 48px 140px; text-align: center;
+  display: flex; flex-direction: column; align-items: center;
+}
+.set__sub {
+  font-family: var(--font-display); font-size: 0.95rem; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 40px;
+}
+.set__player { width: 100%; max-width: 860px; }
+.set__player iframe { display: block; border: 1px solid var(--border-tech); }
 .link-row {
   display: flex; align-items: center; justify-content: space-between;
   padding: 20px 32px; background: var(--bg-surface); text-decoration: none;
@@ -454,7 +466,7 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
   .hero { padding: 24px; justify-content: flex-end; }
   .hero__content { flex: 0 1 auto; padding: 0; margin-bottom: 16vh; max-width: 100%; }
   /* Mantém só o scroll do hero; remove os que colidem com conteúdo */
-  .release .section-scroll, .links-wrap .section-scroll { display: none; }
+  .release .section-scroll, .links-wrap .section-scroll, .set-section .section-scroll { display: none; }
   .hero__name h1 { font-size: clamp(2.4rem, 13vw, 3rem); line-height: 0.9; }
   .hero__name h1 .tw-2 { font-size: 1rem; margin-top: 12px; }
   .hero__name__sub { font-size: 0.78rem; margin-top: 18px; }
@@ -462,15 +474,18 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
   /* RELEASE / LINKS — espaçamento e tipografia */
   .release, .links-wrap { padding: 72px 20px; gap: 40px; }
   .release__body { margin-top: 0; }
-  .release__heading, .links-heading, .contact-heading { font-size: 1.9rem; margin-bottom: 24px; }
+  .release__heading, .links-heading, .contact-heading, .set-heading { font-size: 1.9rem; margin-bottom: 24px; }
   .release__text { font-size: 1rem; margin-bottom: 32px; }
-  .release__eyebrow, .release__index, .contact-eyebrow { margin-bottom: 18px; }
+  .release__eyebrow, .release__index, .contact-eyebrow, .set-eyebrow { margin-bottom: 18px; }
   .release__venues__label { font-size: 0.85rem; }
   .release__venues span:not(.release__venues__label) { font-size: 0.78rem; padding: 10px 16px; }
   .release__photo { padding: 16px; }
 
   /* LINKS */
   .links__photo__quote { left: 12px; bottom: 12px; max-width: 220px; padding: 14px 16px; font-size: 0.72rem; }
+  .set-section { padding: 72px 20px 90px; }
+  .set__sub { font-size: 0.8rem; margin-bottom: 28px; }
+  .set__player iframe { height: 360px; }
   .links__sub { font-size: 0.9rem; margin-bottom: 28px; }
   .link-row { padding: 16px 20px; }
   .link-row__content { margin-left: 16px; }
