@@ -366,6 +366,14 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
   padding: 80px 48px 120px 48px; text-align: center;
   display: flex; flex-direction: column; align-items: center;
   background: radial-gradient(circle at 50% 100%, var(--c-mixed-dim) 0%, transparent 60%);
+  overflow: hidden; isolation: isolate;
+}
+.contact-watermark {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+  font-size: clamp(5rem, 16vw, 15rem); letter-spacing: 0.04em; line-height: 1;
+  color: transparent; -webkit-text-stroke: 1px rgba(113, 82, 255, 0.22);
+  white-space: nowrap; pointer-events: none; user-select: none; z-index: -1;
 }
 .contact-wa {
   display: inline-block; margin-top: 24px;
@@ -402,6 +410,7 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
   border-top: 1px solid var(--border-tech); background: var(--bg-panel);
   font-family: var(--font-display); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);
 }
+.footer__credit { opacity: 0.75; }
 
 /* ─── MODAL DE IMAGEM ─── */
 .modal {
