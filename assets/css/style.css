@@ -383,7 +383,7 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
 .contact-sub em { font-style: normal; color: var(--c-burnt); }
 .contact-cta {
   position: relative; display: flex; align-items: center; justify-content: center;
-  margin: 88px 0 96px;
+  margin: 64px 0 120px;
 }
 .contact-wa {
   display: inline-block; margin: 0;
@@ -398,24 +398,6 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
 }
 .contact-wa:hover { color: var(--c-burnt); }
 .contact-wa:hover::after { width: 100%; }
-
-.contact-agency {
-  position: relative; display: flex; flex-direction: column; align-items: center; gap: 16px;
-  margin-top: 0; padding-top: 36px;
-}
-.contact-agency::before {
-  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-  width: 48px; height: 1px; background: var(--border-tech);
-}
-.contact-agency__label {
-  font-family: var(--font-display); font-size: 0.7rem; font-weight: 500;
-  text-transform: uppercase; letter-spacing: 0.32em; color: var(--text-muted);
-}
-.contact-agency__logo {
-  height: 112px; opacity: 0.82; filter: none; mix-blend-mode: screen;
-  transition: opacity 0.3s;
-}
-.contact-agency__logo:hover { opacity: 1; }
 
 /* ─── FOOTER ─── */
 .footer {
@@ -520,11 +502,8 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
   /* CONTATO */
   .contact-section { padding: 72px 20px 90px; }
   .contact-wa { font-size: 2.4rem; letter-spacing: 0.14em; }
-  .contact-cta { margin: 64px 0 72px; }
+  .contact-cta { margin: 40px 0 96px; }
   .contact-sub { font-size: 0.85rem; letter-spacing: 0.22em; }
-  .contact-agency { gap: 12px; padding-top: 28px; }
-  .contact-agency__label { letter-spacing: 0.22em; }
-  .contact-agency__logo { height: 88px; width: auto; max-width: none; }
 
   /* FOOTER */
   .footer { padding: 28px 20px; font-size: 0.68rem; }
