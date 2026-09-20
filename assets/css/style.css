@@ -334,14 +334,25 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
 
 /* ─── SET EM DESTAQUE ─── */
 .set-section {
-  position: relative; padding: 100px 48px 140px; text-align: center;
+  position: relative; padding: 100px 48px 180px; text-align: center;
   display: flex; flex-direction: column; align-items: center;
 }
 .set__sub {
   font-family: var(--font-display); font-size: 0.95rem; color: var(--text-muted);
   text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 40px;
 }
-.set__player { width: 100%; max-width: 500px; }
+/* Título leva ao set no SoundCloud */
+.set-heading a {
+  position: relative; display: inline-block;
+  color: inherit; text-decoration: none;
+}
+.set-heading a::after {
+  content: ''; position: absolute; left: 0; bottom: -10px;
+  width: 0; height: 2px; background: var(--c-burnt); transition: width 0.35s ease;
+}
+.set-heading a:hover::after { width: 100%; }
+
+.set__player { width: 100%; max-width: 600px; }
 /* Capa quadrada: player 1:1 evita que o SoundCloud corte o topo da arte */
 .set__player iframe {
   display: block; border: 1px solid var(--border-tech);
