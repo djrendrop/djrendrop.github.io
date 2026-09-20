@@ -359,9 +359,19 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
 }
 .set__art:hover img { transform: scale(1.03); filter: brightness(1.05) contrast(1.08); }
-.set__media iframe {
-  display: block; width: 100%;
-  border: 1px solid var(--border-tech); border-top: none;
+/* Sem player embutido, o botao sinaliza que a capa leva ao set */
+.set__play {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 84px; height: 84px; border-radius: 50%; z-index: 2;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  background: rgba(12, 12, 17, 0.35);
+  transition: background 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+}
+.set__play svg { width: 30px; height: 30px; fill: #fff; margin-left: 5px; }
+.set__art:hover .set__play {
+  background: var(--c-mixed-solid); border-color: var(--c-mixed-solid);
+  transform: translate(-50%, -50%) scale(1.08);
 }
 .link-row {
   display: flex; align-items: center; justify-content: space-between;
@@ -512,6 +522,8 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
   .set__sub { font-size: 0.8rem; margin-bottom: 28px; }
   /* no celular o 16:9 vira uma faixa fina: mais altura devolve presenca a arte */
   .set__art { aspect-ratio: 4 / 3; }
+  .set__play { width: 62px; height: 62px; }
+  .set__play svg { width: 22px; height: 22px; margin-left: 4px; }
   .links__sub { font-size: 0.9rem; margin-bottom: 28px; }
   .link-row { padding: 16px 20px; }
   .link-row__content { margin-left: 16px; }
