@@ -341,20 +341,14 @@ section { position: relative; border-top: 1px solid var(--border-tech); }
   font-family: var(--font-display); font-size: 0.95rem; color: var(--text-muted);
   text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 40px;
 }
-/* Título leva ao set no SoundCloud; "play" em roxo marca a ação */
-.set-heading a {
-  position: relative; display: inline-block;
-  color: inherit; text-decoration: none;
-}
-.set-heading em { color: var(--c-mixed-solid); transition: color 0.3s ease; }
-.set-heading a:hover em { color: var(--text-main); }
-.set-heading a::after {
-  content: ''; position: absolute; left: 0; bottom: -10px;
-  width: 0; height: 2px; background: var(--c-mixed-solid); transition: width 0.35s ease;
-}
-.set-heading a:hover::after { width: 100%; }
+/* Título leva ao set no SoundCloud; no hover só "play" muda para o roxo */
+.set-heading a { display: inline-block; color: inherit; text-decoration: none; }
+.set-heading em { transition: color 0.35s ease; }
+.set-heading a:hover em { color: var(--c-mixed-solid); }
 
-.set__player { width: 100%; max-width: 760px; }
+/* O widget do SoundCloud sempre carrega a capa em 500px: acima disso a
+   imagem estica e perde nitidez, entao 500 e o teto de largura */
+.set__player { width: 100%; max-width: 500px; }
 /* Capa e quadrada (cabeca a 3,6% do topo): 21/20 e o maximo de largura
    possivel antes de o SoundCloud cortar a cabeca no recorte vertical */
 .set__player iframe {
